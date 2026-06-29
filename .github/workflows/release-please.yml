@@ -8,6 +8,9 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Release please
         uses: googleapis/release-please-action@v5.0.0
