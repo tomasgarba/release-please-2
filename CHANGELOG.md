@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.5.0-rc.3](https://github.com/tomasgarba/release-please-2/compare/v2.5.0-rc.2...v2.5.0-rc.3) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 1007 ([fc9effd](https://github.com/tomasgarba/release-please-2/commit/fc9effde0fbdffc15a0123d6ad35794d55634025))
+* release-please ([a5c0a8e](https://github.com/tomasgarba/release-please-2/commit/a5c0a8e795ce28196c66222299ccacb9e68772cd))
+
 ## [2.5.0-rc.2](https://github.com/tomasgarba/release-please-2/compare/v2.5.0-rc.1...v2.5.0-rc.2) (2026-06-29)
 
 
