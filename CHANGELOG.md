@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0-rc.3](https://github.com/tomasgarba/release-please-2/compare/v2.1.0-rc.2...v2.1.0-rc.3) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 937 ([9b54fcd](https://github.com/tomasgarba/release-please-2/commit/9b54fcd818ff1977faa9dbb6e88b6faa231e73b1))
+
 ## [2.1.0-rc.2](https://github.com/tomasgarba/release-please-2/compare/v2.1.0-rc.1...v2.1.0-rc.2) (2026-06-29)
 
 
