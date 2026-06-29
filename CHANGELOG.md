@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.0-rc.2](https://github.com/tomasgarba/release-please-2/compare/v2.9.0-rc.1...v2.9.0-rc.2) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 1024 ([2baef68](https://github.com/tomasgarba/release-please-2/commit/2baef680101649ff123457f78dc54df6928b2dd0))
+
 ## [2.9.0-rc.1](https://github.com/tomasgarba/release-please-2/compare/v2.9.0-rc.0...v2.9.0-rc.1) (2026-06-29)
 
 
