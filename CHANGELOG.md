@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.4.0-rc.0](https://github.com/tomasgarba/release-please-2/compare/v2.1.0-rc.4...v2.4.0-rc.0) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 952 ([3aa8db9](https://github.com/tomasgarba/release-please-2/commit/3aa8db99f98e3a22ef3e5e9b30c12c2e78827871))
+
+
+### Miscellaneous Chores
+
+* close 2.2.0 Release ([80e6df1](https://github.com/tomasgarba/release-please-2/commit/80e6df15039a59b3da579fd8a9de66cc120459dd))
+* close 2.3.0 Release ([80392be](https://github.com/tomasgarba/release-please-2/commit/80392be0689b02c9ca13a3fcc5b5a59ed428fe20))
+
 ## [2.1.0-rc.4](https://github.com/tomasgarba/release-please-2/compare/v2.1.0-rc.3...v2.1.0-rc.4) (2026-06-29)
 
 
