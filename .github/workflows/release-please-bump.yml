@@ -36,22 +36,9 @@ jobs:
           original=$(jq -r '.version' package.json)
           npm --no-git-tag-version version minor
           bumped=$(jq -r '.version' package.json)
-          git checkout -b "chore/close-release-$original"
           git add .
-          git commit -m "chore: bump version to $bumped" -m "Release-As: $bumped-rc.0" -n
-          git push -u origin "chore/close-release-$original"
+          git commit -m "chore: close $original Release" -m "Release-As: $bumped-rc.0" -n
+          git push
           echo "Closed version: $original" >> $GITHUB_STEP_SUMMARY
           echo "New version: $bumped"  >> $GITHUB_STEP_SUMMARY
           echo "Release-As: $bumped-rc.0"  >> $GITHUB_STEP_SUMMARY
-          echo "ORIGINAL_VERSION=$original" >> $GITHUB_OUTPUT
-          echo "BUMPED_VERSION=$bumped-rc.0" >> $GITHUB_OUTPUT
-
-      - name: Create PR to merge into main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR_URL=$(gh pr create \
-            --title "Close version ${{ steps.bump.outputs.ORIGINAL_VERSION }}" \
-            --body "Release-As: ${{ steps.bump.outputs.BUMPED_VERSION }}" \
-            --base main)
-          echo "New PR created to merge into main: $PR_URL" >> $GITHUB_STEP_SUMMARY
