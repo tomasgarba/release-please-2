@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.0-rc.0](https://github.com/tomasgarba/release-please-2/compare/v2.5.0-rc.3...v2.7.0-rc.0) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 1013 ([f27f4de](https://github.com/tomasgarba/release-please-2/commit/f27f4de9e219e3484ea8741bff77994697dcb663))
+
+
+### Miscellaneous Chores
+
+* close version 2.6.0 ([#15](https://github.com/tomasgarba/release-please-2/issues/15)) ([1bec667](https://github.com/tomasgarba/release-please-2/commit/1bec667fc49c28ce72b1b93d8b72901f9a7323d0))
+
 ## [2.5.0-rc.3](https://github.com/tomasgarba/release-please-2/compare/v2.5.0-rc.2...v2.5.0-rc.3) (2026-06-29)
 
 
