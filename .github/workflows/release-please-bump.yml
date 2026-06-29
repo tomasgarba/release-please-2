@@ -1,0 +1,57 @@
+name: Release please version bump
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Branch main check
+        run: |
+          if [[ "${{ github.ref }}" != "refs/heads/main" ]]; then
+            echo "Workflow is not invoked from main branch."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v6.0.2
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version=$(jq -r '.version' package.json)
+          gh release create "v$version" \
+            --title "v$version" --generate-notes
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump version in package.json and Release-As
+        id: bump
+        run: |
+          original=$(jq -r '.version' package.json)
+          npm --no-git-tag-version version minor
+          bumped=$(jq -r '.version' package.json)
+          git checkout -b "chore/close-release-$original"
+          git add .
+          git commit -m "chore: bump version to $bumped" -m "Release-As: $bumped-rc.0" -n
+          git push -u origin "chore/close-release-$original"
+          echo "Closed version: $original" >> $GITHUB_STEP_SUMMARY
+          echo "New version: $bumped"  >> $GITHUB_STEP_SUMMARY
+          echo "Release-As: $bumped-rc.0"  >> $GITHUB_STEP_SUMMARY
+          echo "ORIGINAL_VERSION=$original" >> $GITHUB_OUTPUT
+          echo "BUMPED_VERSION=$bumped-rc.0" >> $GITHUB_OUTPUT
+
+      - name: Create PR to merge into main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_URL=$(gh pr create \
+            --title "Close version ${{ steps.bump.outputs.ORIGINAL_VERSION }}" \
+            --body "Release-As: ${{ steps.bump.outputs.BUMPED_VERSION }}" \
+            --base main)
+          echo "New PR created to merge into main: $PR_URL" >> $GITHUB_STEP_SUMMARY
