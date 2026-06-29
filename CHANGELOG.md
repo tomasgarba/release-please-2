@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0-rc.1](https://github.com/tomasgarba/release-please-2/compare/v2.8.0-rc.0...v2.8.0-rc.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 1016 ([d187546](https://github.com/tomasgarba/release-please-2/commit/d18754691723591a873d47b71f25ac889d0f3904))
+
 ## [2.8.0-rc.0](https://github.com/tomasgarba/release-please-2/compare/v2.7.0-rc.1...v2.8.0-rc.0) (2026-06-29)
 
 
