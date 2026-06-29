@@ -51,7 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PR_URL=$(gh pr create \
-            --title "Close version ${{ steps.bump.outputs.ORIGINAL_VERSION }}" \
+            --title "chore: close version ${{ steps.bump.outputs.ORIGINAL_VERSION }}" \
             --body "Release-As: ${{ steps.bump.outputs.BUMPED_VERSION }}" \
             --base main)
           echo "New PR created to merge into main: $PR_URL" >> $GITHUB_STEP_SUMMARY
