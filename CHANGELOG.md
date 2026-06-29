@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0-rc.1](https://github.com/tomasgarba/release-please-2/compare/v2.4.0-rc.0...v2.4.0-rc.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* readme 953 ([4660721](https://github.com/tomasgarba/release-please-2/commit/46607213c18ac61ea7816439a7affef8942859c0))
+
 ## [2.4.0-rc.0](https://github.com/tomasgarba/release-please-2/compare/v2.1.0-rc.4...v2.4.0-rc.0) (2026-06-29)
 
 
