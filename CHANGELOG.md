@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0-rc.1](https://github.com/tomasgarba/release-please-2/compare/v2.7.0-rc.0...v2.7.0-rc.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* 1014 ([246d47b](https://github.com/tomasgarba/release-please-2/commit/246d47b86aa760081ff0a6181255150b5284a36d))
+
 ## [2.7.0-rc.0](https://github.com/tomasgarba/release-please-2/compare/v2.5.0-rc.3...v2.7.0-rc.0) (2026-06-29)
 
 
